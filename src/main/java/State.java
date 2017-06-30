@@ -1,10 +1,3 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
-/**
- * Copyright: CYBER AGENT. INC
- */
 public abstract class State {
 
     public State transit(Event event) {

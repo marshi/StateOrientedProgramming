@@ -1,8 +1,6 @@
 import java.util.Set;
 
-/**
- * Copyright: CYBER AGENT. INC
- */
+
 public class StateMachine {
 
     private State current;

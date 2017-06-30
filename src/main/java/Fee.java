@@ -1,8 +1,6 @@
 import java.text.MessageFormat;
 
-/**
- * Copyright: CYBER AGENT. INC
- */
+
 public class Fee extends State{
 
     private final int fee;
