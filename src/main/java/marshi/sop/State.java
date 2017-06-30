@@ -1,3 +1,7 @@
+package marshi.sop;
+
+import marshi.sop.StateMachine.Event;
+
 public abstract class State {
 
     public State transit(Event event) {

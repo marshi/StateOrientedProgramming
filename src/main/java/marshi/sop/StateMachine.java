@@ -1,4 +1,4 @@
-import java.util.Set;
+package marshi.sop;
 
 
 public class StateMachine {
@@ -11,6 +11,13 @@ public class StateMachine {
 
     public void transit(Event event) {
         current = current.transit(event);
+    }
+
+    public enum Event {
+
+        _10, _50, _100,
+        CRASH;
+
     }
 
 }
