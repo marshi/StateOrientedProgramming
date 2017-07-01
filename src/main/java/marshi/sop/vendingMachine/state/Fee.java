@@ -1,13 +1,14 @@
 package marshi.sop.vendingMachine.state;
 
 import marshi.sop.State;
+import marshi.sop.vendingMachine.VendingMessage;
 import marshi.sop.vendingMachine.VendingStateMachine;
 import marshi.sop.vendingMachine.VendingStateMachine.Event;
 
 import java.text.MessageFormat;
 
 
-public class Fee extends State<VendingStateMachine.Event> {
+public class Fee extends State<VendingMessage> {
 
     private final int fee;
 
@@ -16,8 +17,8 @@ public class Fee extends State<VendingStateMachine.Event> {
     }
 
     @Override
-    protected State next(Event event) {
-        switch (event) {
+    protected State next(VendingMessage message) {
+        switch (message.getEvent()) {
             case CRASH:
                 return new Crash();
             case _10:

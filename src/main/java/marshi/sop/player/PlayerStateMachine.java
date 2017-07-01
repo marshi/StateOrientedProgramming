@@ -6,7 +6,7 @@ import marshi.sop.StateMachine;
 /**
  * Copyright: CYBER AGENT. INC
  */
-public class PlayerStateMachine extends StateMachine<PlayerStateMachine.Event> {
+public class PlayerStateMachine extends StateMachine {
 
     public PlayerStateMachine(State initialState) {
         super(initialState);

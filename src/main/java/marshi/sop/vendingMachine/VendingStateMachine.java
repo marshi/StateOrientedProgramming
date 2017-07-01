@@ -4,7 +4,7 @@ package marshi.sop.vendingMachine;
 import marshi.sop.State;
 import marshi.sop.StateMachine;
 
-public class VendingStateMachine extends StateMachine<VendingStateMachine.Event> {
+public class VendingStateMachine extends StateMachine{
 
     public VendingStateMachine(State initialState) {
         super(initialState);
