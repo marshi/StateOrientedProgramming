@@ -14,7 +14,7 @@ import static marshi.sop.player.PlayerStateMachine.Event.PLAY;
 public class Playing extends State<PlayerMessage> {
 
     @Override
-    protected State next(PlayerMessage message) {
+    protected State<PlayerMessage> next(PlayerMessage message) {
         switch(message.getEvent()) {
             case PLAY:
                 return new Playing();
@@ -26,7 +26,7 @@ public class Playing extends State<PlayerMessage> {
     }
 
     @Override
-    protected State execute() {
+    protected State<PlayerMessage> execute() {
         System.out.println("再生中");
         return this;
     }

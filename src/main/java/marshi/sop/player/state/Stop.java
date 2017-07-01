@@ -15,7 +15,7 @@ import static marshi.sop.player.PlayerStateMachine.Event.STOP;
 public class Stop extends State<PlayerMessage> {
 
     @Override
-    protected State next(PlayerMessage event) {
+    protected State<PlayerMessage> next(PlayerMessage event) {
         switch(event.getEvent()) {
             case PLAY:
                 return new Playing();
@@ -27,7 +27,7 @@ public class Stop extends State<PlayerMessage> {
     }
 
     @Override
-    protected State execute() {
+    protected State<PlayerMessage> execute() {
         System.out.println("停止中");
         return this;
     }

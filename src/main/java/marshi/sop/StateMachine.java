@@ -3,14 +3,14 @@ package marshi.sop;
 /**
  * Copyright: CYBER AGENT. INC
  */
-public abstract class StateMachine {
-    protected State current;
+public abstract class StateMachine<M extends Message>  {
+    protected State<M> current;
 
-    public StateMachine(State initialState) {
+    public StateMachine(State<M> initialState) {
         this.current = initialState;
     }
 
-    public void transit(Message message) {
+    public void transit(M message) {
         current = current.transit(message);
     }
 }

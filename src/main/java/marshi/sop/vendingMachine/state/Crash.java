@@ -10,12 +10,12 @@ import marshi.sop.vendingMachine.VendingStateMachine;
 public class Crash extends State<VendingMessage>{
 
     @Override
-    protected State next(VendingMessage message) {
+    protected State<VendingMessage> next(VendingMessage message) {
         return new Fee(0);
     }
 
     @Override
-    protected State execute() {
+    protected State<VendingMessage> execute() {
         System.out.println("crash!!");
         return new Fee(0);
     }
