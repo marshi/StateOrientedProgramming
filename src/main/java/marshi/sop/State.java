@@ -1,10 +1,8 @@
 package marshi.sop;
 
-import marshi.sop.StateMachine.Event;
+public abstract class State<E> {
 
-public abstract class State {
-
-    public State transit(Event event) {
+    public State transit(E event) {
         State state = next(event);
         if (state == null) {
             return this;
@@ -12,7 +10,7 @@ public abstract class State {
         return state.execute();
     }
 
-    protected abstract State next(Event event);
+    protected abstract State next(E event);
 
     protected abstract State execute();
 

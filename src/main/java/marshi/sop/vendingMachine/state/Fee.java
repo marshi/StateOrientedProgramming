@@ -1,18 +1,13 @@
-package marshi.sop.state;
+package marshi.sop.vendingMachine.state;
 
 import marshi.sop.State;
-import marshi.sop.StateMachine;
-import marshi.sop.StateMachine.Event;
+import marshi.sop.vendingMachine.VendingStateMachine;
+import marshi.sop.vendingMachine.VendingStateMachine.Event;
 
 import java.text.MessageFormat;
 
-import static marshi.sop.StateMachine.Event.CRASH;
-import static marshi.sop.StateMachine.Event._10;
-import static marshi.sop.StateMachine.Event._100;
-import static marshi.sop.StateMachine.Event._50;
 
-
-public class Fee extends State {
+public class Fee extends State<VendingStateMachine.Event> {
 
     private final int fee;
 

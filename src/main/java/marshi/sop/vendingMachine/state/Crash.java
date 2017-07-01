@@ -1,15 +1,15 @@
-package marshi.sop.state;
+package marshi.sop.vendingMachine.state;
 
 import marshi.sop.State;
-import marshi.sop.StateMachine;
+import marshi.sop.vendingMachine.VendingStateMachine;
 
 /**
  * Copyright: CYBER AGENT. INC
  */
-public class Crash extends State{
+public class Crash extends State<VendingStateMachine.Event>{
 
     @Override
-    protected State next(StateMachine.Event event) {
+    protected State next(VendingStateMachine.Event event) {
         return new Fee(0);
     }
 

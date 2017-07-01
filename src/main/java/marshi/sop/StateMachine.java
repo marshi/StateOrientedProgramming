@@ -1,23 +1,18 @@
 package marshi.sop;
 
+import marshi.sop.vendingMachine.VendingStateMachine;
 
-public class StateMachine {
-
-    private State current;
+/**
+ * Copyright: CYBER AGENT. INC
+ */
+public abstract class StateMachine<E> {
+    protected State current;
 
     public StateMachine(State initialState) {
         this.current = initialState;
     }
 
-    public void transit(Event event) {
+    public void transit(E event) {
         current = current.transit(event);
     }
-
-    public enum Event {
-
-        _10, _50, _100,
-        CRASH;
-
-    }
-
 }
