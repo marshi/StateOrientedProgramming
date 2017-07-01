@@ -1,8 +1,5 @@
 package marshi.sop;
 
-/**
- * Copyright: CYBER AGENT. INC
- */
 public abstract class StateMachine<M extends Message>  {
     protected State<M> current;
 

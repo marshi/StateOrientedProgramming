@@ -1,16 +1,8 @@
 package marshi.sop.player.state;
 
-import marshi.sop.Message;
 import marshi.sop.State;
 import marshi.sop.player.PlayerMessage;
-import marshi.sop.player.PlayerStateMachine;
-import marshi.sop.player.PlayerStateMachine.Event;
 
-import static marshi.sop.player.PlayerStateMachine.Event.PLAY;
-
-/**
- * Copyright: CYBER AGENT. INC
- */
 public class Playing extends State<PlayerMessage> {
 
     @Override
