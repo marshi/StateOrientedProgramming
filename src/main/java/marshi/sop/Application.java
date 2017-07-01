@@ -26,7 +26,7 @@ public class Application {
         VendingMessage message_50 = new VendingMessage(COIN, properties_50);
         VendingMessage message_30 = new VendingMessage(COIN, properties_30);
         VendingMessage message_100 = new VendingMessage(COIN, properties_100);
-        VendingMessage message_crash = new VendingMessage(CRASH, null);
+        VendingMessage message_crash = new VendingMessage(CRASH);
         vendingStateMachine.transit(message_10);
         vendingStateMachine.transit(message_10);
         vendingStateMachine.transit(message_10);
@@ -41,8 +41,8 @@ public class Application {
 
         Stop stop = new Stop();
         PlayerStateMachine playerStateMachine = new PlayerStateMachine(stop);
-        PlayerMessage playerMessage_play = new PlayerMessage(PLAY, null);
-        PlayerMessage playerMessage_stop = new PlayerMessage(STOP, null);
+        PlayerMessage playerMessage_play = new PlayerMessage(PLAY);
+        PlayerMessage playerMessage_stop = new PlayerMessage(STOP);
         playerStateMachine.transit(playerMessage_play);
         playerStateMachine.transit(playerMessage_play);
         playerStateMachine.transit(playerMessage_stop);

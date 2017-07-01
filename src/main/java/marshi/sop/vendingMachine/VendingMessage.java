@@ -6,4 +6,8 @@ public class VendingMessage extends Message<VendingStateMachine.Event, VendingPr
     public VendingMessage(VendingStateMachine.Event event, VendingProperty properties) {
         super(event, properties);
     }
+
+    public VendingMessage(VendingStateMachine.Event event) {
+        super(event);
+    }
 }
